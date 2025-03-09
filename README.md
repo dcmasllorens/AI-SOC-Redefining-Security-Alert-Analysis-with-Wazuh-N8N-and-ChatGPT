@@ -4,8 +4,8 @@ Ejemplo de un **workflow** para la detección y análisis automatizado de alerta
 
 ## 📌 Índice 
    1. [🔍 Flujo](#Flujo) 
-   2. [⚙️ Despliegue y configuración del entorno](#Despliegue) 
-   3. [🚀 Ejemplo de Ejecución](#Ejemplo)
+   2. [⚙️ Despliegue y configuración del entorno](#Despliege) 
+   3. [🚀 Ejemplos de ejecución](#Ejemplo)
    4. [🧠 Reflexión y conclusiones finales](#Reflexión)
 
 ## 🔍 1.Flujo <a name="Flujo"></a>
@@ -30,7 +30,7 @@ Se van a desplegar los siguientes servicios utilizando **Docker Compose**:
 - **[N8N](https://docs.n8n.io/hosting/installation/docker/)** 
 - **[Wazuh](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html)**
   
-La configuración del despliegue de los servicios se encuentra en el archivo `docker-compose.yml`.
+La configuración para el despliegue de los servicios se encuentra en el archivo `docker-compose.yml`.
 
 ## Despliegue y configuración de Wazuh 
 
@@ -138,7 +138,7 @@ Import-Module "C:\AtomicRedTeam\invoke-atomicredteam\Invoke-AtomicRedTeam.psd1" 
 $PSDefaultParameterValues = @{"Invoke-AtomicTest:PathToAtomicsFolder"="C:\AtomicRedTeam\atomics"}
 ~~~~
 
-# 🚀 Ejemplos de Ejecución <a name="Ejemplo"></a>
+# 🚀 Ejemplos de ejecución <a name="Ejemplo"></a>
 
 ## T1112-3 Modify registry to store logon credentials
 
