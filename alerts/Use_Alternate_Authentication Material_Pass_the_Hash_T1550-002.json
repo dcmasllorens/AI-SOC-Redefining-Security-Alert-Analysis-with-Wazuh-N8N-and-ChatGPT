@@ -1,0 +1,76 @@
+{
+   "timestamp":"2025-03-08T16:21:48.766+0000",
+   "rule":{
+      "level":12,
+      "description":"Lsass process was accessed by C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\mimikatz\\\\x64\\\\mimikatz.exe with read permissions, possible credential dump",
+      "id":"92900",
+      "mitre":{
+         "id":[
+            "T1003.001"
+         ],
+         "tactic":[
+            "Credential Access"
+         ],
+         "technique":[
+            "LSASS Memory"
+         ]
+      },
+      "firedtimes":1,
+      "mail":true,
+      "groups":[
+         "sysmon",
+         "sysmon_eid10_detections",
+         "windows"
+      ]
+   },
+   "agent":{
+      "id":"001",
+      "name":"pc-1",
+      "ip":"192.168.1.157"
+   },
+   "manager":{
+      "name":"wazuh.manager"
+   },
+   "id":"1741450908.8040806",
+   "decoder":{
+      "name":"windows_eventchannel"
+   },
+   "data":{
+      "win":{
+         "system":{
+            "providerName":"Microsoft-Windows-Sysmon",
+            "providerGuid":"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "eventID":"10",
+            "version":"3",
+            "level":"4",
+            "task":"10",
+            "opcode":"0",
+            "keywords":"0x8000000000000000",
+            "systemTime":"2025-03-08T16:21:51.3377376Z",
+            "eventRecordID":"22820",
+            "processID":"3100",
+            "threadID":"3860",
+            "channel":"Microsoft-Windows-Sysmon/Operational",
+            "computer":"DESKTOP-1I88MER",
+            "severityValue":"INFORMATION",
+            "message":"\"Process accessed:\r\nRuleName: technique_id=T1003,technique_name=Credential Dumping\r\nUtcTime: 2025-03-08 16:21:51.325\r\nSourceProcessGUID: {bb035c3e-6e9e-67cc-ca03-000000000e00}\r\nSourceProcessId: 7864\r\nSourceThreadId: 9140\r\nSourceImage: C:\\Users\\User\\AppData\\Local\\Temp\\mimikatz\\x64\\mimikatz.exe\r\nTargetProcessGUID: {bb035c3e-4401-67cc-0c00-000000000e00}\r\nTargetProcessId: 712\r\nTargetImage: C:\\Windows\\system32\\lsass.exe\r\nGrantedAccess: 0x1010\r\nCallTrace: C:\\Windows\\SYSTEM32\\ntdll.dll+9d9b4|C:\\Windows\\System32\\KERNELBASE.dll+338ae|C:\\Users\\User\\AppData\\Local\\Temp\\mimikatz\\x64\\mimikatz.exe+c291e|C:\\Users\\User\\AppData\\Local\\Temp\\mimikatz\\x64\\mimikatz.exe+c4501|C:\\Users\\User\\AppData\\Local\\Temp\\mimikatz\\x64\\mimikatz.exe+c4394|C:\\Users\\User\\AppData\\Local\\Temp\\mimikatz\\x64\\mimikatz.exe+85a44|C:\\Users\\User\\AppData\\Local\\Temp\\mimikatz\\x64\\mimikatz.exe+8587c|C:\\Users\\User\\AppData\\Local\\Temp\\mimikatz\\x64\\mimikatz.exe+855af|C:\\Users\\User\\AppData\\Local\\Temp\\mimikatz\\x64\\mimikatz.exe+c97a5|C:\\Windows\\System32\\KERNEL32.DLL+17374|C:\\Windows\\SYSTEM32\\ntdll.dll+4cc91\r\nSourceUser: DESKTOP-1I88MER\\User\r\nTargetUser: NT AUTHORITY\\SYSTEM\""
+         },
+         "eventdata":{
+            "ruleName":"technique_id=T1003,technique_name=Credential Dumping",
+            "utcTime":"2025-03-08 16:21:51.325",
+            "sourceProcessGUID":"{bb035c3e-6e9e-67cc-ca03-000000000e00}",
+            "sourceProcessId":"7864",
+            "sourceThreadId":"9140",
+            "sourceImage":"C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\mimikatz\\\\x64\\\\mimikatz.exe",
+            "targetProcessGUID":"{bb035c3e-4401-67cc-0c00-000000000e00}",
+            "targetProcessId":"712",
+            "targetImage":"C:\\\\Windows\\\\system32\\\\lsass.exe",
+            "grantedAccess":"0x1010",
+            "callTrace":"C:\\\\Windows\\\\SYSTEM32\\\\ntdll.dll+9d9b4|C:\\\\Windows\\\\System32\\\\KERNELBASE.dll+338ae|C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\mimikatz\\\\x64\\\\mimikatz.exe+c291e|C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\mimikatz\\\\x64\\\\mimikatz.exe+c4501|C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\mimikatz\\\\x64\\\\mimikatz.exe+c4394|C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\mimikatz\\\\x64\\\\mimikatz.exe+85a44|C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\mimikatz\\\\x64\\\\mimikatz.exe+8587c|C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\mimikatz\\\\x64\\\\mimikatz.exe+855af|C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\mimikatz\\\\x64\\\\mimikatz.exe+c97a5|C:\\\\Windows\\\\System32\\\\KERNEL32.DLL+17374|C:\\\\Windows\\\\SYSTEM32\\\\ntdll.dll+4cc91",
+            "sourceUser":"DESKTOP-1I88MER\\\\User",
+            "targetUser":"NT AUTHORITY\\\\SYSTEM"
+         }
+      }
+   },
+   "location":"EventChannel"
+}

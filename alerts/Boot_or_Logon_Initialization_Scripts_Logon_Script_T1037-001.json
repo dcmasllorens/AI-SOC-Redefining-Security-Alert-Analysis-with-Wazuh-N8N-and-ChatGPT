@@ -1,0 +1,88 @@
+{
+   "timestamp":"2025-03-08T15:17:31.110+0000",
+   "rule":{
+      "level":10,
+      "description":"Value added to registry key has Base64-like pattern",
+      "id":"92041",
+      "mitre":{
+         "id":[
+            "T1027",
+            "T1112"
+         ],
+         "tactic":[
+            "Defense Evasion"
+         ],
+         "technique":[
+            "Obfuscated Files or Information",
+            "Modify Registry"
+         ]
+      },
+      "firedtimes":1,
+      "mail":false,
+      "groups":[
+         "sysmon",
+         "sysmon_eid1_detections",
+         "windows"
+      ]
+   },
+   "agent":{
+      "id":"001",
+      "name":"pc-1",
+      "ip":"192.168.1.157"
+   },
+   "manager":{
+      "name":"wazuh.manager"
+   },
+   "id":"1741447051.7477802",
+   "decoder":{
+      "name":"windows_eventchannel"
+   },
+   "data":{
+      "win":{
+         "system":{
+            "providerName":"Microsoft-Windows-Sysmon",
+            "providerGuid":"{5770385f-c22a-43e0-bf4c-06f5698ffbd9}",
+            "eventID":"1",
+            "version":"5",
+            "level":"4",
+            "task":"1",
+            "opcode":"0",
+            "keywords":"0x8000000000000000",
+            "systemTime":"2025-03-08T15:17:30.6775905Z",
+            "eventRecordID":"21845",
+            "processID":"3100",
+            "threadID":"3860",
+            "channel":"Microsoft-Windows-Sysmon/Operational",
+            "computer":"DESKTOP-1I88MER",
+            "severityValue":"INFORMATION",
+            "message":"\"Process Create:\r\nRuleName: technique_id=T1012,technique_name=Query Registry\r\nUtcTime: 2025-03-08 15:17:30.669\r\nProcessGuid: {bb035c3e-5f8a-67cc-1503-000000000e00}\r\nProcessId: 8768\r\nImage: C:\\Windows\\System32\\reg.exe\r\nFileVersion: 10.0.19041.1 (WinBuild.160101.0800)\r\nDescription: Registry Console Tool\r\nProduct: Microsoft® Windows® Operating System\r\nCompany: Microsoft Corporation\r\nOriginalFileName: reg.exe\r\nCommandLine: REG.exe  ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d \"C:\\Users\\User\\AppData\\Local\\Temp\\art.bat\" /f\r\nCurrentDirectory: C:\\Users\\User\\AppData\\Local\\Temp\\\r\nUser: DESKTOP-1I88MER\\User\r\nLogonGuid: {bb035c3e-360f-67cc-441e-0b0000000000}\r\nLogonId: 0xB1E44\r\nTerminalSessionId: 1\r\nIntegrityLevel: High\r\nHashes: SHA1=C0DB341DEFA8EF40C03ED769A9001D600E0F4DAE,MD5=227F63E1D9008B36BDBCC4B397780BE4,SHA256=C0E25B1F9B22DE445298C1E96DDFCEAD265CA030FA6626F61A4A4786CC4A3B7D,IMPHASH=BE482BE427FE212CFEF2CDA0E61F19AC\r\nParentProcessGuid: {bb035c3e-5f8a-67cc-1303-000000000e00}\r\nParentProcessId: 1612\r\nParentImage: C:\\Windows\\System32\\cmd.exe\r\nParentCommandLine: \"cmd.exe\" /c echo \"echo Art \"Logon Script\" atomic test was successful. >> %USERPROFILE%\\desktop\\T1037.001-log.txt\" > %temp%\\art.bat & REG.exe ADD HKCU\\Environment /v UserInitMprLogonScript /t REG_SZ /d \"%temp%\\art.bat\" /f\r\nParentUser: DESKTOP-1I88MER\\User\""
+         },
+         "eventdata":{
+            "ruleName":"technique_id=T1012,technique_name=Query Registry",
+            "utcTime":"2025-03-08 15:17:30.669",
+            "processGuid":"{bb035c3e-5f8a-67cc-1503-000000000e00}",
+            "processId":"8768",
+            "image":"C:\\\\Windows\\\\System32\\\\reg.exe",
+            "fileVersion":"10.0.19041.1 (WinBuild.160101.0800)",
+            "description":"Registry Console Tool",
+            "product":"Microsoft® Windows® Operating System",
+            "company":"Microsoft Corporation",
+            "originalFileName":"reg.exe",
+            "commandLine":"REG.exe  ADD HKCU\\\\Environment /v UserInitMprLogonScript /t REG_SZ /d \\\"C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\art.bat\\\" /f",
+            "currentDirectory":"C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\Temp\\\\",
+            "user":"DESKTOP-1I88MER\\\\User",
+            "logonGuid":"{bb035c3e-360f-67cc-441e-0b0000000000}",
+            "logonId":"0xb1e44",
+            "terminalSessionId":"1",
+            "integrityLevel":"High",
+            "hashes":"SHA1=C0DB341DEFA8EF40C03ED769A9001D600E0F4DAE,MD5=227F63E1D9008B36BDBCC4B397780BE4,SHA256=C0E25B1F9B22DE445298C1E96DDFCEAD265CA030FA6626F61A4A4786CC4A3B7D,IMPHASH=BE482BE427FE212CFEF2CDA0E61F19AC",
+            "parentProcessGuid":"{bb035c3e-5f8a-67cc-1303-000000000e00}",
+            "parentProcessId":"1612",
+            "parentImage":"C:\\\\Windows\\\\System32\\\\cmd.exe",
+            "parentCommandLine":"\\\"cmd.exe\\\" /c echo \\\"echo Art \\\"Logon Script\\\" atomic test was successful. &gt;&gt; %USERPROFILE%\\\\desktop\\\\T1037.001-log.txt\\\" &gt; %temp%\\\\art.bat &amp; REG.exe ADD HKCU\\\\Environment /v UserInitMprLogonScript /t REG_SZ /d \\\"%temp%\\\\art.bat\\\" /f",
+            "parentUser":"DESKTOP-1I88MER\\\\User"
+         }
+      }
+   },
+   "location":"EventChannel"
+}
