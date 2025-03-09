@@ -186,7 +186,7 @@ Para mejorar el análisis de la alerta, podemos ajustar el prompt que le proporc
 
 Podemos observar cómo, al ajustar el planteamiento del prompt con el mismo ataque ejecutado, obtenemos un análisis más detallado y técnico. Esto nos permite configurar diferentes tipos de notificación de alertas, adaptándolas al perfil que deseamos, ya sea más ejecutivo o más técnico, según las necesidades y el nivel de detalle requerido para cada caso.
 
-![alerta_3.png](./images/alerta3.png)
+![alerta_3.png](./images/alerta_3.png)
 
 ## T1550-002 Use Alternate Authentication Material: Pass the Hash
 Simularemos la tecnica Pass the Hash,  los atacantes la utilizan para acceder a sistemas sin necesidad de conocer la contraseña real de un usuario. En lugar de usar la contraseña en texto claro, el atacante roba el "hash" de la contraseña, que es una versión cifrada de la misma. Luego, utiliza ese hash para hacerse pasar por el usuario y acceder al sistema.
