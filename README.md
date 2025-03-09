@@ -1,4 +1,4 @@
-# AI-SOC: Redefining Security Alert Analysis with Wazuh, N8N, and ChatGPT
+## AI-SOC: Redefining Security Alert Analysis with Wazuh, N8N, and ChatGPT
 
 Ejemplo de un **workflow** para la detección y análisis automatizado de alertas de seguridad, integrando **Wazuh**, **n8n** y **ChatGPT**.
 
@@ -10,10 +10,10 @@ Ejemplo de un **workflow** para la detección y análisis automatizado de alerta
 
 ## 🔍 1.Flujo <a name="Flujo"></a>
 
-1️⃣ **Detección de Alerta en Wazuh** 
+- **Detección de Alerta en Wazuh** 
 	- Se genera una alerta ante un evento sospechoso. 
 	- Wazuh envía la alerta mediante **webhook** a la API de **N8N**. 
-2️⃣ **Procesamiento en N8N** 
+- **Procesamiento en N8N** 
 	- Captura de la alerta a través del webhook. 
 	- Análisis avanzado con **Chat-GPT**, extrayendo: 
 		✅ Procesos involucrados 
