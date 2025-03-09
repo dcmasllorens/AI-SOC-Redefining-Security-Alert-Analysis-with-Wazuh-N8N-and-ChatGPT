@@ -158,7 +158,7 @@ La alerta se genera en Wazuh y luego se envía a N8N a través de un webhook par
 
 ![alert1.png](./images/alert1.png)
 
-![[./images/alerta.png]]
+![alerta](./images/alerta.png)
 
 # T1037-001 Boot or Logon Initialization Scripts: Logon Script
 
